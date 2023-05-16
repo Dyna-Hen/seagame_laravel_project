@@ -15,7 +15,6 @@ class UserController extends Controller
      */
     public function index()
     {
-        // dd(1);
         $user = User::all();
         $user = UserResource::collection($user);
         return $user;
@@ -26,7 +25,6 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        // dd(2);
         $user = User::store($request);
         return response()->json(['success'=>true,'data'=>$user],200);
     }
@@ -36,8 +34,6 @@ class UserController extends Controller
      */
     public function show(string $id)
     {
-        //
-        // dd(3);
         $user = User::find($id);
         $user = new UserResource($user);
         return $user;
@@ -48,8 +44,6 @@ class UserController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
-        // dd(4);
         $user = User::store($request, $id);
         return response()->json(['success'=>true,'data'=>$user],200);
     }
@@ -59,8 +53,6 @@ class UserController extends Controller
      */
     public function destroy(string $id)
     {
-        //
-        // dd(5);
         $user = User::find($id);
         $user->delete();
 

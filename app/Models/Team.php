@@ -17,7 +17,6 @@ class Team extends Model
         'created_by',
     ];
 
-
     public function events()
     {
         return $this->belongsToMany(Event::class, 'event_teams')->withTimestamps();

@@ -18,18 +18,6 @@ class TicketResource extends JsonResource
             'date' => $this->date,
             'event_name' => $this->event->name,
             'event_team' => $this->event->teams,
-            // 'event_nam' => $this->event->teams->name,
-
-
-            // 'event_team' => $this->,
-
-
-            // 'event_name' => $this->event->name,
-            // 'event_des' => $this->event->description,
-            // 'event_team' => $this->event->teams,
-
-
-
         ];
     }
 }

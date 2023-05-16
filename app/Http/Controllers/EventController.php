@@ -64,19 +64,9 @@ class EventController extends Controller
         return "event has been deleted.";
     }
 
-    //Search
-    // public function search(Request $request){
-    //     $search = $request->input('search');
-
-    //     $events = DB::table('events')->where('name','LIKE','%'.$search.'%'->get());
-        
-    //     return view('events.index',compact('events'));
-    // }
-
     public function search()
 {
     $event = Event::all();
-    // dd(request('name'));
     $name = request('name');
     $event = Event::where('name','like','%'.$name.'%')->get();
     return response()->json(['success' => true, 'data' => $event], 200);

@@ -26,7 +26,6 @@ class Event extends Model
         return $this->belongsToMany(Team::class, 'event_teams')->withTimestamps();
     }
 
-
     // ===================FUNCTION TO CREATE & UPDATE===================================
 
     public static function store($request,$id=null){

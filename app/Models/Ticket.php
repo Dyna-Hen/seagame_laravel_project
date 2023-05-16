@@ -24,15 +24,15 @@ class Ticket extends Model
         return $ticket;
     }
 
-
     // Back relation ticket to user=============================================
-     public function user(): BelongsTo
-     {
-         return $this->belongsTo(User::class);
-     }
+    public function user(): BelongsTo
+    {
+        return $this->belongsTo(User::class);
+    }
 
-     public function event(): BelongsTo
-     {
-         return $this->belongsTo(Event::class);
-     }
+    // Back relation ticket to event=============================================
+    public function event(): BelongsTo
+    {
+        return $this->belongsTo(Event::class);
+    }
 }

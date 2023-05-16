@@ -54,13 +54,13 @@ class User extends Authenticatable
         return $user;
     }
 
-     // Relationship with event ========================================
-     public function events():HasMany{
+    // Relationship with event ========================================
+    public function events():HasMany{
         return $this->hasMany(Event::class);
     }
 
-     // Relationship with team ========================================
-     public function teams():HasMany{
+    // Relationship with team ========================================
+    public function teams():HasMany{
         return $this->hasMany(Team::class);
     }
 

@@ -9,8 +9,4 @@ class TeamEvent extends Model
 {
     use HasFactory;
 
-    // protected $fillable = [
-    //     'event_id',
-    //     'team_id',
-    // ];
 }
